@@ -171,4 +171,88 @@ const agenda: Array<Item> = [
       },
     },
   },
+  {
+    message: "Em Aula: BIO",
+    moment: {
+      weekDay: WeekDay.monday,
+      startTime: {
+        hours: 16,
+        minutes: 50,
+      },
+      endTime: {
+        hours: 18,
+        minutes: 30,
+      },
+    },
+  },
+  {
+    message: "Em Aula: IC",
+    moment: {
+      weekDay: WeekDay.tuesday,
+      startTime: {
+        hours: 8,
+        minutes: 50,
+      },
+      endTime: {
+        hours: 10,
+        minutes: 40,
+      },
+    },
+  },
+  {
+    message: "Em Aula: CC",
+    moment: {
+      weekDay: WeekDay.tuesday,
+      startTime: {
+        hours: 10,
+        minutes: 40,
+      },
+      endTime: {
+        hours: 12,
+        minutes: 20,
+      },
+    },
+  },
+  {
+    message: "Em Aula: SD",
+    moment: {
+      weekDay: WeekDay.wednesday,
+      startTime: {
+        hours: 10,
+        minutes: 40,
+      },
+      endTime: {
+        hours: 12,
+        minutes: 20,
+      },
+    },
+  },
+  {
+    message: "Em Aula: IC",
+    moment: {
+      weekDay: WeekDay.thursday,
+      startTime: {
+        hours: 8,
+        minutes: 50,
+      },
+      endTime: {
+        hours: 10,
+        minutes: 40,
+      },
+    },
+  },
+  {
+    message: "Em Aula: BIO",
+    moment: {
+      weekDay: WeekDay.friday,
+      startTime: {
+        hours: 16,
+        minutes: 50,
+      },
+      endTime: {
+        hours: 18,
+        minutes: 30,
+      },
+    },
+  },
 ];

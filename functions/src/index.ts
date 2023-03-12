@@ -10,11 +10,9 @@ import {
   isTime,
 } from "./types";
 
-const token: string =
-  "MzA0Nzg1NjcwNTIwNzAwOTI4.GqE5Lm.6mJW8SqCrsVl8ShWkj9fc11AykgBA4JVEMyeJ8";
-
-export const verify = functions.pubsub
-  .schedule("every 5 minutes")
+export const verify = functions
+  .runWith({ secrets: ["DISCORD_TOKEN"] })
+  .pubsub.schedule("every 5 minutes")
   .timeZone("America/Sao_Paulo")
   .onRun(async (_) => {
     const now = new Date(Date.now() - 3 * 3600 * 1000);
@@ -68,7 +66,7 @@ export const verify = functions.pubsub
 
     await axios.patch("https://discord.com/api/v6/users/@me/settings", data, {
       headers: {
-        Authorization: token,
+        Authorization: `${process.env.DISCORD_TOKEN}`,
       },
     });
 

@@ -12,7 +12,7 @@ import {
 
 export const verify = functions
   .runWith({ secrets: ["DISCORD_TOKEN"] })
-  .pubsub.schedule("every 5 minutes")
+  .pubsub.schedule("every 10 minutes")
   .timeZone("America/Sao_Paulo")
   .onRun(async (_) => {
     const now = new Date(Date.now() - 3 * 3600 * 1000);
@@ -144,80 +144,52 @@ function formatFullDate(date: Date): string {
 
 const agenda: Array<Item> = [
   {
-    message: "Em Aula: SD",
+    message: "Em Aula: SEG",
     moment: {
-      weekDay: WeekDay.monday,
+      weekDay: WeekDay.tuesday,
       startTime: {
-        hours: 8,
+        hours: 13,
+        minutes: 10,
+      },
+      endTime: {
+        hours: 14,
         minutes: 50,
       },
-      endTime: {
-        hours: 10,
-        minutes: 40,
-      },
     },
   },
   {
-    message: "Em Aula: CC",
+    message: "Em Aula: Tópicos IA",
     moment: {
-      weekDay: WeekDay.monday,
+      weekDay: WeekDay.tuesday,
       startTime: {
-        hours: 10,
-        minutes: 40,
-      },
-      endTime: {
-        hours: 12,
-        minutes: 20,
-      },
-    },
-  },
-  {
-    message: "Em Aula: BIO",
-    moment: {
-      weekDay: WeekDay.monday,
-      startTime: {
-        hours: 16,
+        hours: 14,
         minutes: 50,
       },
       endTime: {
         hours: 18,
-        minutes: 30,
+        minutes: 0,
       },
     },
   },
   {
-    message: "Em Aula: IC",
-    moment: {
-      weekDay: WeekDay.tuesday,
-      startTime: {
-        hours: 8,
-        minutes: 50,
-      },
-      endTime: {
-        hours: 10,
-        minutes: 40,
-      },
-    },
-  },
-  {
-    message: "Em Aula: CC",
-    moment: {
-      weekDay: WeekDay.tuesday,
-      startTime: {
-        hours: 10,
-        minutes: 40,
-      },
-      endTime: {
-        hours: 12,
-        minutes: 20,
-      },
-    },
-  },
-  {
-    message: "Em Aula: SD",
+    message: "Em Aula: SEG",
     moment: {
       weekDay: WeekDay.wednesday,
       startTime: {
+        hours: 14,
+        minutes: 50,
+      },
+      endTime: {
+        hours: 16,
+        minutes: 30,
+      },
+    },
+  },
+  {
+    message: "Em Aula: TCC1",
+    moment: {
+      weekDay: WeekDay.thursday,
+      startTime: {
         hours: 10,
         minutes: 40,
       },
@@ -228,30 +200,16 @@ const agenda: Array<Item> = [
     },
   },
   {
-    message: "Em Aula: IC",
+    message: "Em Aula: Tópicos SEG",
     moment: {
       weekDay: WeekDay.thursday,
       startTime: {
-        hours: 8,
-        minutes: 50,
-      },
-      endTime: {
-        hours: 10,
-        minutes: 40,
-      },
-    },
-  },
-  {
-    message: "Em Aula: BIO",
-    moment: {
-      weekDay: WeekDay.friday,
-      startTime: {
-        hours: 16,
+        hours: 14,
         minutes: 50,
       },
       endTime: {
         hours: 18,
-        minutes: 30,
+        minutes: 0,
       },
     },
   },
